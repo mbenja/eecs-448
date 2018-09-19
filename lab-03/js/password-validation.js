@@ -4,6 +4,11 @@
 const modal_manager = new ModalManager();
 
 /**
+  * Call for password form modal to be presented
+*/
+modal_manager.operationPasswordForm();
+
+/**
   * Validates password entry to spec
   * Passwords must match
   * Passwords must be at least eight characters long
@@ -33,6 +38,11 @@ function validatePasswords() {
     // show bad length on modal
     document.getElementById('password_bad_length').style.display = "block";
   }
-  // call for modal with given paramaters
-  modal_manager.managePasswordEntry(is_good_entry, 'show');
+  // call for bad password modal
+  if (!is_good_entry) {
+    modal_manager.manageBadPassword('show');
+  } else {
+    // good password
+    modal_manager.manageGoodPassword('show');
+  }
 }

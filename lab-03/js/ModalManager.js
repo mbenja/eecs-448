@@ -10,15 +10,25 @@ class ModalManager {
   }
 
   /**
-    * Shows or hides bad password entry based off of paramater
-    * @param {Bool} is_good_entry -- user provided good entry
+    * Shows or hides bad password entry based off of parameter
     * @param {String} operation -- show or hide modal
   */
-  managePasswordEntry(is_good_entry, operation) {
-    if (is_good_entry) {
-      $('#modal_good_password').modal(operation);
-    } else {
-      $('#modal_bad_password').modal(operation);
-    }
+  manageBadPassword(operation) {
+    $('#modal_bad_password').modal(operation);
+  }
+
+  /**
+    * Shows or hides good password entry based off parameter
+    * @param {String} operation -- show or hide modal
+  */
+  manageGoodPassword(operation) {
+    $('#modal_good_password').modal(operation);
+  }
+
+  /**
+    * Performs operations to present password form modal
+  */
+  operationPasswordForm() {
+    $('#modal_password_form').modal('show');
   }
 }
