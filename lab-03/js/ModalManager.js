@@ -31,4 +31,11 @@ class ModalManager {
   operationPasswordForm() {
     $('#modal_password_form').modal('show');
   }
+
+  /**
+    * Performs operations to present slideshow modal
+  */
+  operationSlideshow() {
+    $('#modal_slideshow').modal('show');
+  }
 }

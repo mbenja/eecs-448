@@ -1,0 +1,20 @@
+/**
+  * Slideshow image class
+*/
+.img-slideshow {
+  width: 30vw;
+}
+
+/**
+  * Slideshow content class, centering in carousel
+*/
+.carousel-inner > .item > img{
+margin:auto;
+}
+
+/**
+  * Keeping with of modal content equal to the width of the carousel and images
+*/
+#modal_slideshow_dialog {
+  width: 30vw;
+}
