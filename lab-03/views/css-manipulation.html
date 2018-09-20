@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../styles/style.css">
+
+    <title>Password Validation</title>
+  </head>
+
+  <body class="bg-primary">
+
+    <!--
+    CSS manipulation form modal
+    -->
+    <div class="modal fade bg-primary" tabindex="-1" role="dialog" id="modal_css_manipulation" data-keyboard="false" data-backdrop="static" onkeypress="javascript: if(event.keyCode == 13) validatePasswords();">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">CSS Manipulation</h5>
+          </div>
+          <div class="modal-body">
+            <div id="div_dummy_text">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+                feugiat eleifend augue, sed sollicitudin est. Maecenas cursus mattis
+                arcu, et elementum sapien pellentesque quis. Cras eu feugiat nisi.
+                Donec nec mattis dolor, a egestas lectus. Pellentesque orci lectus,
+                dapibus nec tortor a, tincidunt fermentum eros. Vivamus dictum interdum
+                tortor a posuere. Cras sed risus non neque vestibulum lacinia. Donec
+                congue tellus turpis, eget vehicula augue efficitur sit amet. Etiam
+                bibendum sapien et magna ultrices, ut vestibulum sem vestibulum.
+              </p>
+            </div>
+            <form>
+              <div class="alert alert-primary" role="alert">
+                Border Color
+              </div>
+              <div class="row">
+                <div class="col form-group bmd-form-group">
+                  <label for="input_border_red" class="bmd-label-floating">Red</label>
+                  <input type="number" class="form-control" id="input_border_red">
+                </div>
+                <div class="col form-group bmd-form-group">
+                  <label for="input_border_green" class="bmd-label-floating">Green</label>
+                  <input type="number" class="form-control" id="input_border_green">
+                </div>
+                <div class="col form-group bmd-form-group">
+                  <label for="input_border_blue" class="bmd-label-floating">Blue</label>
+                  <input type="number" class="form-control" id="input_border_blue">
+                </div>
+                <div class="col form-group bmd-form-group">
+                  <label for="input_border_width" class="bmd-label-floating">Width</label>
+                  <input type="number" class="form-control" id="input_border_width">
+                </div>
+              </div>
+              <div class="alert alert-primary" role="alert">
+                Backrground Color
+              </div>
+              <div class="row">
+                <div class="col form-group bmd-form-group">
+                  <label for="input_background_red" class="bmd-label-floating">Red</label>
+                  <input type="number" class="form-control" id="input_background_red">
+                </div>
+                <div class="col form-group bmd-form-group">
+                  <label for="input_background_green" class="bmd-label-floating">Green</label>
+                  <input type="number" class="form-control" id="input_background_green">
+                </div>
+                <div class="col form-group bmd-form-group">
+                  <label for="input_background_blue" class="bmd-label-floating">Blue</label>
+                  <input type="number" class="form-control" id="input_background_blue">
+                </div>
+              </div>
+              <button type="button" class="btn btn-info btn-raised" onclick="updateCSS();">Update</button>
+            </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery first, then Popper.js, SnackbarJS, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
+    <!-- SnackbarJS plugin -->
+    <script src="https://cdn.rawgit.com/FezVrasta/snackbarjs/1.1.0/dist/snackbar.min.js"></script>
+    <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
+    <script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
+    <!-- Custom JS -->
+    <script src="../js/ModalManager.js"></script>
+    <script src="../js/css-manipulation.js"></script>
+  </body>
+</html>

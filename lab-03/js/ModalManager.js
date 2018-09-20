@@ -38,4 +38,11 @@ class ModalManager {
   operationSlideshow() {
     $('#modal_slideshow').modal('show');
   }
+
+  /**
+    * Performs operations to present css manipulation modal
+  */
+  operationCSSManipulation() {
+    $('#modal_css_manipulation').modal('show');
+  }
 }
