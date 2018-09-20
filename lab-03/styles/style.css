@@ -18,3 +18,11 @@ margin:auto;
 #modal_slideshow_dialog {
   width: 30vw;
 }
+
+/**
+  * Dummy text div
+*/
+#div_dummy_text {
+  padding: 5px;
+  margin-bottom: 5px;
+}
