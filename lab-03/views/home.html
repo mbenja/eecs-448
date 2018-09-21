@@ -18,53 +18,39 @@
   <body class="bg-primary">
 
     <!--
-    Slideshow modal
+    Home modal
     -->
-    <div class="modal fade bg-secondary" tabindex="-1" role="dialog" id="modal_slideshow" data-keyboard="false" data-backdrop="static">
-      <div class="modal-dialog" role="document" id="modal_slideshow_dialog">
+    <div class="modal fade bg-secondary" tabindex="-1" role="dialog" id="modal_home" data-keyboard="false" data-backdrop="static">
+      <div class="modal-dialog modal-lg" role="document" id="modal_slideshow_dialog">
         <div class="modal-content" id="modal_slideshow_content">
           <div class="modal-header">
-            <h5 class="modal-title">Slideshow</h5>
+            <h5 class="modal-title">Home</h5>
           </div>
           <div class="modal-body">
-            <div id="carouseleIndicators" class="carousel slide" data-ride="carousel">
-              <ol class="carousel-indicators">
-                <li data-target="#carouseleIndicators" data-slide-to="0" class="active"></li>
-                <li data-target="#carouseleIndicators" data-slide-to="1"></li>
-                <li data-target="#carouseleIndicators" data-slide-to="2"></li>
-                <li data-target="#carouseleIndicators" data-slide-to="3"></li>
-                <li data-target="#carouseleIndicators" data-slide-to="4"></li>
-              </ol>
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img class="img-fluid img-slideshow" src="../styles/images/slide_1.png" alt="First slide">
-                </div>
-                <div class="carousel-item">
-                  <img class="img-fluid img-slideshow" src="../styles/images/slide_2.png" alt="Second slide">
-                </div>
-                <div class="carousel-item">
-                  <img class="img-fluid img-slideshow" src="../styles/images/slide_3.png" alt="Third slide">
-                </div>
-                <div class="carousel-item">
-                  <img class="img-fluid img-slideshow" src="../styles/images/slide_4.png" alt="Fourth slide">
-                </div>
-                <div class="carousel-item">
-                  <img class="img-fluid img-slideshow" src="../styles/images/slide_5.png" alt="Fifth slide">
-                </div>
+            <div class="row">
+              <div class="col elevate">
+                <button type="button" class="btn btn-raised btn-primary form-control" onclick="javascript: location.href='password-validation.html';">
+                  Password Validation
+                </button>
               </div>
-              <a class="carousel-control-prev" href="#carouseleIndicators" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-              </a>
-              <a class="carousel-control-next" href="#carouseleIndicators" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-              </a>
+              <div class="col elevate">
+                <button type="button" class="btn btn-raised btn-primary form-control" onclick="javascript: location.href='css-manipulation.html';">
+                  CSS Manipulation
+                </button>
+              </div>
             </div>
-            <nav class="navbar navbar-light bg-light justify-content-between">
-              <button type="button" class="btn btn-secondary" onclick="changeSlide('prev');">Previous</button>
-              <button type="button" class="btn btn-primary" onclick="changeSlide('next')">Next</button>
-            </nav>
+            <div class="row">
+              <div class="col elevate">
+                <button type="button" class="btn btn-raised btn-primary form-control" onclick="javascript: location.href='profile.html';">
+                  Profile
+                </button>
+              </div>
+              <div class="col elevate">
+                <button type="button" class="btn btn-raised btn-primary form-control" onclick="javascript: location.href='slideshow.html';">
+                  Slideshow
+                </button>
+              </div>
+            </div>
           </div>
           <div class="modal-footer">
             <p class="text-muted" style="margin-right:0.5vw;">
@@ -83,6 +69,6 @@
     <script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
     <!-- Custom JS -->
     <script src="../js/ModalManager.js"></script>
-    <script src="../js/slideshow.js"></script>
+    <script src="../js/home.js"></script>
   </body>
 </html>
