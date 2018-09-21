@@ -1,4 +1,40 @@
 /**
+  * Setting font family
+*/
+body {
+  font-family: 'Ubuntu Mono', monospace;
+}
+
+/**
+  * Hover class
+*/
+.elevate {
+  display:inline-block;
+  position: relative;
+  -webkit-transition: all 200ms ease-in;
+  -webkit-transform: scale(1);
+  -ms-transition: all 200ms ease-in;
+  -ms-transform: scale(1);
+  -moz-transition: all 200ms ease-in;
+  -moz-transform: scale(1);
+  transition: all 200ms ease-in;
+  transform: scale(1);
+
+}
+
+.elevate:hover {
+  z-index: 2;
+  -webkit-transition: all 200ms ease-in;
+  -webkit-transform: scale(1.05);
+  -ms-transition: all 200ms ease-in;
+  -ms-transform: scale(1.05);
+  -moz-transition: all 200ms ease-in;
+  -moz-transform: scale(1.05);
+  transition: all 200ms ease-in;
+  transform: scale(1.05);
+}
+
+/**
   * Slideshow image class
 */
 .img-slideshow {
@@ -25,4 +61,14 @@ margin:auto;
 #div_dummy_text {
   padding: 5px;
   margin-bottom: 5px;
+  color: black;
+  background-color: white;
+}
+
+/**
+  * Setting background image for profile modal
+*/
+#modal_profile {
+  background-image: linear-gradient(#adb6c6, #4a4e56);
+  background-size: 100%;
 }
