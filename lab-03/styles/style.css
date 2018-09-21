@@ -1,8 +1,10 @@
 /**
   * Setting font family
+  * Background gradient
 */
 body {
   font-family: 'Ubuntu Mono', monospace;
+  background-image: linear-gradient(#adb6c6, #4a4e56);
 }
 
 /**
@@ -63,12 +65,4 @@ margin:auto;
   margin-bottom: 5px;
   color: black;
   background-color: white;
-}
-
-/**
-  * Setting background image for profile modal
-*/
-#modal_profile {
-  background-image: linear-gradient(#adb6c6, #4a4e56);
-  background-size: 100%;
 }
