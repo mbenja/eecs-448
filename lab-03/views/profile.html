@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../styles/style.css">
+
+    <title>Benjamin Streit - Personal Profile</title>
+  </head>
+
+  <body class="bg-primary">
+
+    <!--
+    CSS manipulation form modal
+    -->
+    <div class="modal fade bg-primary" tabindex="-1" role="dialog" id="modal_profile" data-keyboard="false" data-backdrop="static">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Personal Profile</h5>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col">
+                <div class="card">
+                  <img class="card-img-top" src="../styles/images/profile_photo.png">
+                </div>
+              </div>
+              <div class="col">
+                <div class="card">
+                  <div class="card-body">
+                    <h4 class="card-title">
+                      Bio
+                    </h4>
+                    <p class="card-text">
+                      Benjamin is a junior at the University of Kansas and is studying
+                      Computer Science and Mathematics. He has served as a student research
+                      assistant, and as a software engineering intern during his academic career
+                      thus far. When not studying, Benjamin enjoys running and playing anything
+                      found on a Nintendo console.
+                    </p>
+                  </div>
+                </div>
+                <div class="card" style="margin-top:.5vh;">
+                  <div class="card-body">
+                    <h4 class="card-title">
+                      Some links
+                    </h4>
+                    <p class="card-text">
+                      <a href="https://www.kdor.ks.gov/Apps/VoterReg/Default.aspx" target="_blank">
+                        Don't Boo, Vote
+                      </a>
+                      <br/>
+                      <a href="https://github.com/mbenja" target="_blank">
+                        Github
+                      </a>
+                    </p>
+                  </div>
+                </div>
+                <div class="card" style="margin-top:.5vh;">
+                  <div class="card-body">
+                    <h4 class="card-title">
+                      Watch a video
+                    </h4>
+                    <button type="button" class="btn btn-raised btn-secondary" onclick="modal_manager.manageProfileVideo('show')">
+                      Learn About Neural Networks
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--
+     Video modal
+    -->
+    <div class="modal fade bg-secondary" tabindex="-1" role="dialog" id="modal_profile_video">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content" id="modal_profile_video_content">
+          <div class="modal-body">
+            <iframe width="100%" height="453px" src="https://www.youtube.com/embed/aircAruvnKk?list=PLZHQObOWTQDNU6R1_67000Dx_ZCJB-3pi" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery first, then Popper.js, SnackbarJS, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
+    <!-- SnackbarJS plugin -->
+    <script src="https://cdn.rawgit.com/FezVrasta/snackbarjs/1.1.0/dist/snackbar.min.js"></script>
+    <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
+    <script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
+    <!-- Custom JS -->
+    <script src="../js/ModalManager.js"></script>
+    <script src="../js/profile.js"></script>
+  </body>
+</html>

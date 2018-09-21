@@ -26,6 +26,14 @@ class ModalManager {
   }
 
   /**
+    * Shows or hides video on profile page
+    * @param {String} operation -- show or hide modal
+  */
+  manageProfileVideo(operation) {
+    $('#modal_profile_video').modal(operation);
+  }
+
+  /**
     * Performs operations to present password form modal
   */
   operationPasswordForm() {
@@ -44,5 +52,12 @@ class ModalManager {
   */
   operationCSSManipulation() {
     $('#modal_css_manipulation').modal('show');
+  }
+
+  /**
+    * Performs operations to present profile modal
+  */
+  operationProfile() {
+    $('#modal_profile').modal('show');
   }
 }
