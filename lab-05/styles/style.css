@@ -1,0 +1,14 @@
+/**
+  * Setting font family
+*/
+body {
+  font-family: 'Ubuntu Mono', monospace;
+}
+
+/**
+  * Setting background gradient for all modals
+*/
+.modal {
+  background-image: linear-gradient(#a2bce5, #4469a3);
+  background-size: 100%;
+}
