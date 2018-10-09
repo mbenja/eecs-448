@@ -27,12 +27,12 @@
             <h5 class="modal-title">Create User</h5>
           </div>
           <div class="modal-body">
-            <form action="../php/createUser.php" method="post">
+            <form>
               <div class="form-group">
                 <label for="input_user">User</label>
                 <input type="text" class="form-control" id="input_user" name="input_user" placeholder="Enter user">
               </div>
-              <button type="submit" class="btn btn-primary">Submit</button>
+              <button type="button" class="btn btn-primary" onclick="createUser()">Submit</button>
             </form>
           </div>
           <div class="modal-footer">
