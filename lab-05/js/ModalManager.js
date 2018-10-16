@@ -29,4 +29,8 @@ class ModalManager {
   operationAdminHome() {
     $('#modal_admin_home').modal('show');
   }
+
+  operationViewUserPosts() {
+    $('#modal_view_posts').modal('show');
+  }
 }

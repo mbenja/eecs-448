@@ -12,6 +12,54 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../styles/style.css">
 
+    <title>Benjamin Streit - Delete Post</title>
+  </head>
+
+  <body>
+
+    <!--
+    View posts modal
+    -->
+    <div class="modal fade" tabindex="-1" role="dialog" id="modal_view_posts" data-keyboard="false" data-backdrop="static">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">View User Posts</h5>
+          </div>
+          <div class="modal-body">
+            <form action="../php/viewUserPosts.php" method="post">
+              <div class="form-group">
+                <label for="select_user">Select user</label>
+                <select class="form-control" id="select_user" name="select_user">
+                  <?php
+
+                  // connect to db
+                  $mysql_connection = new mysqli("mysql.eecs.ku.edu", "b265s866", "dov7Naph", "b265s866");
+                  /* check connection */
+                  if ($mysql_connection->connect_errno) {
+                      printf("Connect failed: %s\n", $mysql_connection->connect_error);
+                      exit();
+                  }
+
+
+                  // create query string, perform query
+                  $query = "SELECT * FROM `Users`;";
+                  $users = $mysql_connection->query($query);
+
+                  // iterate through us<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+    <!-- Font Family -->
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../styles/style.css">
+
     <title>Benjamin Streit - Create Post</title>
   </head>
 
@@ -47,6 +95,45 @@
                   $users = $mysql_connection->query($query);
 
                   // iterate through users
+                  while($row = $users->fetch_assoc()) {
+                    // open option tag
+                    echo "<option>";
+                    echo $row["user_id"];
+                    // close option tag
+                    echo "</option>";
+                  }
+
+                  // close connection
+                  $mysql_connection->close();
+
+                  ?>
+
+                </select>
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <p class="text-muted" style="margin-right:0.5vw;">
+              Created for EECS 448
+            </p>
+          </div>
+      </div>
+    </div>
+
+    <!-- jQuery first, then Popper.js, SnackbarJS, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
+    <!-- SnackbarJS plugin -->
+    <script src="https://cdn.rawgit.com/FezVrasta/snackbarjs/1.1.0/dist/snackbar.min.js"></script>
+    <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
+    <script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
+    <!-- Custom JS -->
+    <script src="../js/ModalManager.js"></script>
+    <script src="../js/viewUserPosts.js"></script>
+  </body>
+</html>
+ers
                   while($row = $users->fetch_assoc()) {
                     // open option tag
                     echo "<option>";
