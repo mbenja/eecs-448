@@ -15,4 +15,11 @@ class ModalManager {
   operationCreateUser() {
     $('#modal_create_user').modal('show');
   }
+
+  /**
+    * Performs operations to present create post modal
+  */
+  operationCreatePost() {
+    $('#modal_create_post').modal('show');
+  }
 }
