@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+    <!-- Font Family -->
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../styles/style.css">
+
+    <title>Benjamin Streit - Quiz</title>
+  </head>
+
+  <body>
+
+    <!--
+    Quiz modal
+    -->
+    <div class="modal fade" tabindex="-1" role="dialog" id="modal_quiz" data-keyboard="false" data-backdrop="static">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Quiz</h5>
+          </div>
+          <div class="modal-body">
+            <form action="../php/quiz.php" method="post">
+              <!--
+              //////////////////////////////////////////
+              //                                      //
+              //             QUESTION ONE             //
+              //                                      //
+              //////////////////////////////////////////
+              -->
+              <div class="jumbotron">
+                <h5 class="display-10" name="q1">What is the capital of Portugal?</h5>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="check_q1" id="inlineRadio1" value="lisbon">
+                <label class="form-check-label" for="inlineRadio1">Lisbon</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="check_q1" id="inlineRadio2" value="madrid">
+                <label class="form-check-label" for="inlineRadio2">Madrid</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="check_q1" id="inlineRadio3" value="paris">
+                <label class="form-check-label" for="inlineRadio3">Paris</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="check_q1" id="inlineRadio4" value="portugal_city">
+                <label class="form-check-label" for="inlineRadio4">Portugal City</label>
+              </div>
+              <!--
+              //////////////////////////////////////////
+              //                                      //
+              //             QUESTION TWO             //
+              //                                      //
+              //////////////////////////////////////////
+              -->
+              <div class="jumbotron">
+                <h5 class="display-10" name="q2">Famous Apple cellular phone.</h5>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="check_q2" id="inlineRadio1" value="iphone">
+                <label class="form-check-label" for="inlineRadio1">iPhone</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="check_q2" id="inlineRadio2" value="uphone">
+                <label class="form-check-label" for="inlineRadio2">uPhone</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="check_q2" id="inlineRadio3" value="wephone">
+                <label class="form-check-label" for="inlineRadio3">wePhone</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="check_q2" id="inlineRadio4" value="wumbophone">
+                <label class="form-check-label" for="inlineRadio4">wumboPhone</label>
+              </div>
+              <!--
+              //////////////////////////////////////////
+              //                                      //
+              //           QUESTION THREE             //
+              //                                      //
+              //////////////////////////////////////////
+              -->
+              <div class="jumbotron">
+                <h5 class="display-10" name="q3">Famous Apple laptop computer.</h5>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="check_q3" id="inlineRadio1" value="macbook">
+                <label class="form-check-label" for="inlineRadio1">MacBook</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="check_q3" id="inlineRadio2" value="crapbook">
+                <label class="form-check-label" for="inlineRadio2">CrapBook</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="check_q3" id="inlineRadio3" value="wackbook">
+                <label class="form-check-label" for="inlineRadio3">WackBook</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="check_q3" id="inlineRadio4" value="lackbook">
+                <label class="form-check-label" for="inlineRadio4">LackBook</label>
+              </div>
+              <!--
+              //////////////////////////////////////////
+              //                                      //
+              //            QUESTION FOUR             //
+              //                                      //
+              //////////////////////////////////////////
+              -->
+              <div class="jumbotron">
+                <h5 class="display-10" name="q4">The sun rises in the _______.</h5>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="check_q4" id="inlineRadio1" value="east">
+                <label class="form-check-label" for="inlineRadio1">East</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="check_q4" id="inlineRadio2" value="west">
+                <label class="form-check-label" for="inlineRadio2">West</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="check_q4" id="inlineRadio3" value="north">
+                <label class="form-check-label" for="inlineRadio3">North</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="check_q4" id="inlineRadio4" value="south">
+                <label class="form-check-label" for="inlineRadio4">South</label>
+              </div>
+              <!--
+              //////////////////////////////////////////
+              //                                      //
+              //            QUESTION FIVE             //
+              //                                      //
+              //////////////////////////////////////////
+              -->
+              <div class="jumbotron">
+                <h5 class="display-10" name="q5">This project deserves an _______.</h5>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="check_q5" id="inlineRadio1" value="a">
+                <label class="form-check-label" for="inlineRadio1">A</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="check_q5" id="inlineRadio2" value="b">
+                <label class="form-check-label" for="inlineRadio2">B</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="check_q5" id="inlineRadio3" value="c">
+                <label class="form-check-label" for="inlineRadio3">C</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="check_q5" id="inlineRadio4" value="d">
+                <label class="form-check-label" for="inlineRadio4">D</label>
+              </div>
+              <br><br>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <p class="text-muted" style="margin-right:0.5vw;">
+              Created for EECS 448
+            </p>
+          </div>
+      </div>
+    </div>
+
+    <!-- jQuery first, then Popper.js, SnackbarJS, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
+    <!-- SnackbarJS plugin -->
+    <script src="https://cdn.rawgit.com/FezVrasta/snackbarjs/1.1.0/dist/snackbar.min.js"></script>
+    <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
+    <script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
+    <!-- Custom JS -->
+    <script src="../js/ModalManager.js"></script>
+    <script src="../js/quiz.js"></script>
+  </body>
+</html>

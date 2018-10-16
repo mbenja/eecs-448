@@ -8,9 +8,9 @@ for ($i = 0; $i <= 100; $i++) {
     if ($i == 0 && $j == 0) {
       echo "<td/>";
     } elseif ($i == 0) {
-      echo "<td>" . $j . "<td/>";
+      echo "<td><strong>" . $j . "</strong><td/>";
     } elseif ($j == 0) {
-      echo "<td>" . $i . "<td/>";
+      echo "<td><strong>" . $i . "</strong><td/>";
     } else {
       echo "<td>" . ($i * $j) . "<td/>";
     }
