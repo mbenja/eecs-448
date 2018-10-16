@@ -22,4 +22,11 @@ class ModalManager {
   operationCreatePost() {
     $('#modal_create_post').modal('show');
   }
+
+  /**
+    * Performs operations to present create user modal
+  */
+  operationAdminHome() {
+    $('#modal_admin_home').modal('show');
+  }
 }
