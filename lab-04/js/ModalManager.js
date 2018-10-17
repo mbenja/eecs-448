@@ -10,10 +10,17 @@ class ModalManager {
   }
 
   /**
-    * Performs operations to present create user modal
+    * Performs operations to present modal
   */
   operationQuiz() {
     $('#modal_quiz').modal('show');
+  }
+
+  /**
+    * Performs operations to present modal
+  */
+  operationFrontend() {
+    $('#modal_customer_frontend').modal('show');
   }
 
 }

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+    <!-- Font Family -->
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../styles/style.css">
+
+    <title>Benjamin Streit - Quiz</title>
+  </head>
+
+  <body>
+
+    <!--
+    Quiz modal
+    -->
+    <div class="modal fade" tabindex="-1" role="dialog" id="modal_customer_frontend" data-keyboard="false" data-backdrop="static">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Customer Frontend</h5>
+          </div>
+          <div class="modal-body">
+            <form action="../php/customerBackend.php" method="post" onsubmit="return validate();">
+              <!--
+              //////////////////////////////////////////
+              //                                      //
+              //              CREDENTIALS             //
+              //                                      //
+              //////////////////////////////////////////
+              -->
+              <div class="jumbotron">
+                <h5 class="display-10" name="q1">Account Credentials</h5>
+              </div>
+              <div class="form-group">
+                <label class="bmd-label-floating" for="input_email">Email address</label>
+                <input type="email" class="form-control" id="input_email" name="input_email">
+              </div>
+              <div class="form-group">
+                <label class="bmd-label-floating" for="input_password">Password</label>
+                <input type="password" class="form-control" id="input_password" name="input_password">
+              </div>
+              <!--
+              //////////////////////////////////////////
+              //                                      //
+              //                 CART                 //
+              //                                      //
+              //////////////////////////////////////////
+              -->
+              <div class="jumbotron">
+                <h5 class="display-10" name="q1">Cart</h5>
+              </div>
+              <div class="form-group">
+                <label for="input_bananas" class="bmd-label-floating">How many bananas @ 1.50 per bunch?</label>
+                <input type="number" class="form-control" id="input_bananas" name="input_bananas">
+              </div>
+              <div class="form-group">
+                <label class="bmd-label-floating" for="input_apples">How many apples @ 1.00 per pound?</label>
+                <input type="number" class="form-control" id="input_apples" name="input_apples">
+              </div>
+              <div class="form-group">
+                <label class="bmd-label-floating" for="input_oranges">How many oranges @ 0.75 per pound?</label>
+                <input type="number" class="form-control" id="input_oranges" name="input_oranges">
+              </div>
+              <!--
+              //////////////////////////////////////////
+              //                                      //
+              //               SHIPPING               //
+              //                                      //
+              //////////////////////////////////////////
+              -->
+              <div class="jumbotron">
+                <h5 class="display-10" name="q1">Shipping</h5>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="check_shipping" id="inlineRadio1" value="0">
+                <label class="form-check-label" for="inlineRadio1">Free 7 day</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="check_shipping" id="inlineRadio2" value="50">
+                <label class="form-check-label" for="inlineRadio2">$50.00 over night</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="check_shipping" id="inlineRadio3" value="5">
+                <label class="form-check-label" for="inlineRadio3">$5.00 three day</label>
+              </div>
+              <!--
+              //////////////////////////////////////////
+              //                                      //
+              //              SUBMISSION              //
+              //                                      //
+              //////////////////////////////////////////
+              -->
+              <br><br>
+              <div class="justify-content-between">
+                <a role="button" class="btn btn-danger" href="./customerFrontend.html">Reset form</a>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <p class="text-muted" style="margin-right:0.5vw;">
+              Created for EECS 448
+            </p>
+          </div>
+      </div>
+    </div>
+
+    <div class="modal fade bg-danger" tabindex="-1" role="dialog" id="modal_error" data-keyboard="false" data-backdrop="static">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Whoops</h5>
+          </div>
+          <div class="modal-body">
+            <p>There is an error in the form input, the form will be reset.</p>
+            <a role="button" class="btn btn-primary" href="./customerFrontend.html">Got it</a>
+          </div>
+          <div class="modal-footer">
+            <p class="text-muted" style="margin-right:0.5vw;">
+              Created for EECS 448
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery first, then Popper.js, SnackbarJS, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U" crossorigin="anonymous"></script>
+    <!-- SnackbarJS plugin -->
+    <script src="https://cdn.rawgit.com/FezVrasta/snackbarjs/1.1.0/dist/snackbar.min.js"></script>
+    <script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9" crossorigin="anonymous"></script>
+    <script>$(document).ready(function() { $('body').bootstrapMaterialDesign(); });</script>
+    <!-- Custom JS -->
+    <script src="../js/ModalManager.js"></script>
+    <script src="../js/customerFrontend.js"></script>
+  </body>
+</html>

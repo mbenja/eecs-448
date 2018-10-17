@@ -1,0 +1,29 @@
+/**
+  * Setting font family
+*/
+body {
+  font-family: 'Ubuntu Mono', monospace;
+}
+
+/**
+  * Setting background gradient for all modals
+*/
+.modal {
+  background-image: linear-gradient(#a2bce5, #4469a3);
+  background-size: 100%;
+}
+
+/**
+  * Styling for jumbotrons
+*/
+.jumbotron {
+  margin-top: 2.5vh;
+  width: 100%;
+}
+
+/**
+  * Table
+*/
+/*td, th {
+  padding: 50px;
+}*/
