@@ -23,4 +23,11 @@ class ModalManager {
     $('#modal_customer_frontend').modal('show');
   }
 
+  /**
+    * Performs operations to present home modal
+  */
+  operationHome(operation) {
+    $('#modal_home').modal('show');
+  }
+
 }

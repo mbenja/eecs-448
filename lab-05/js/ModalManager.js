@@ -33,4 +33,11 @@ class ModalManager {
   operationViewUserPosts() {
     $('#modal_view_posts').modal('show');
   }
+
+  /**
+    * Performs operations to present home modal
+  */
+  operationHome(operation) {
+    $('#modal_home').modal('show');
+  }
 }
