@@ -342,3 +342,37 @@ void TestSuite::test18() {
   m_results += ("Result: " + result + "\n");
   m_results += "--------------------------------------------------\n";
 }
+
+void TestSuite::test19() {
+  test_list = new LinkedListOfInts();
+  std::string result = "FAILED";
+  for (int i = 0; i < 100; i++) {
+    test_list->addFront(i);
+  }
+  std::vector<int> list_vector = test_list->toVector();
+  if (list_vector.begin() == 99) {
+    result = "PASSED";
+    m_num_passed++;
+  }
+  m_results += "Test: 19\n";
+  m_results += "Description: addFront adds node in correct location in non-empty list\n";
+  m_results += ("Result: " + result + "\n");
+  m_results += "--------------------------------------------------\n";
+}
+
+void TestSuite::test20() {
+  test_list = new LinkedListOfInts();
+  std::string result = "FAILED";
+  for (int i = 0; i < 100; i++) {
+    test_list->addBack(i);
+  }
+  std::vector<int> list_vector = test_list->toVector();
+  if (list_vector.back() == 99) {
+    result = "PASSED";
+    m_num_passed++;
+  }
+  m_results += "Test: 20\n";
+  m_results += "Description: addBack adds node in correct location in non-empty list\n";
+  m_results += ("Result: " + result + "\n");
+  m_results += "--------------------------------------------------\n";
+}

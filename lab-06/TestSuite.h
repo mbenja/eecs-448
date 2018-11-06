@@ -108,6 +108,16 @@ public:
     * @post Prints Pass/Fail: toVector creates vector containing contents of large list
   */
   void test18();
+
+  /**
+    * @post Prints Pass/Fail: addFront adds node in correct location in non-empty list
+  */
+  void test19();
+
+  /**
+    * @post Prints Pass/Fail: addBack adds node in correct location in non-empty list
+  */
+  void test20();
 private:
   LinkedListOfInts* test_list;
   std::string m_results;
