@@ -19,9 +19,9 @@ public:
   */
   void runTests();
   /**
-    * @returns Pass/Fail: Size of empty list is zero
+    * @post Prints Pass/Fail: Size of empty list is zero
   */
-  bool test1();
+  void test1();
 private:
   LinkedListOfInts test_list;
 };

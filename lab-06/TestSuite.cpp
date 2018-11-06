@@ -5,17 +5,19 @@
 *	@brief Implementation file for test class
 */
 
+#include <iostream>
+#include <string>
 #include "TestSuite.h"
 
 void TestSuite::runTests() {
   test1();
 }
 
-bool TestSuite::test1() {
+void TestSuite::test1() {
+  std::string passed = "FAILED";
   int size = test_list.size();
   if (size == 0) {
-    return true;
-  } else {
-    return false;
+    passed = "PASSED";
   }
+  std::cout << "Test 1: Size of empty list is zero - " << passed << "\n";
 }
