@@ -23,66 +23,91 @@ public:
     * @post Prints Pass/Fail: Size of empty list is zero
   */
   void test1();
+
   /**
     * @post Prints Pass/Fail: Size is correct after singular addFront
   */
   void test2();
+
   /**
     * @post Prints Pass/Fail: Size is correct after singular addBack
   */
   void test3();
+
   /**
     * @post Prints Pass/Fail: Size is correct after consecutive addFront
   */
   void test4();
+
   /**
     * @post Prints Pass/Fail: Size is correct after consecutive addBack
   */
   void test5();
+
   /**
     * @post Prints Pass/Fail: isEmpty is False on empty list
   */
   void test6();
+
   /**
     * @post Prints Pass/Fail: isEmpty is True on non-empty list
   */
   void test7();
+
   /**
     * @post Prints Pass/Fail: Size is correct after singular addFront and removeFront
   */
   void test8();
+
   /**
     * @post Prints Pass/Fail: Size is correct after singular addBack and removeBack
   */
   void test9();
+
+  /**
+    * @post Prints Pass/Fail: Size is correct after consecutive removeFront on non-empty list
+  */
+  void test10();
+
+  /**
+    * @post Prints Pass/Fail: Size is correct after consecutive removeBack on non-empty list
+  */
+  void test11();
+
   /**
     * @post Prints Pass/Fail: removeFront on empty list is False
   */
-  void test10();
+  void test12();
+
   /**
     * @post Prints Pass/Fail: removeBack on empty list is False
   */
-  void test11();
+  void test13();
+
   /**
     * @post Prints Pass/Fail: Search is False on empty list
   */
-  void test12();
+  void test14();
+
   /**
     * @post Prints Pass/Fail: Search is False on empty search result
   */
-  void test13();
+  void test15();
+
   /**
     * @post Prints Pass/Fail: Search is True on non-empty search result over large list
   */
-  void test14();
+  void test16();
+
   /**
     * @post Prints Pass/Fail: toVector is empty vector on empty list
   */
-  void test15();
+  void test17();
+
   /**
     * @post Prints Pass/Fail: toVector creates vector containing contents of large list
   */
-  void test16();
+  void test18();
 private:
   LinkedListOfInts* test_list;
   std::string m_results;

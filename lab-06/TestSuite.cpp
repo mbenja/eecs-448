@@ -200,18 +200,60 @@ void TestSuite::test9() {
 void TestSuite::test10() {
   test_list = new LinkedListOfInts();
   std::string result = "FAILED";
-  bool search_result = test_list->search(1);
-  if (search_result == false) {
+  int size_pre = test_list->size();
+  for (int i = 0; i < 100; i++) {
+    test_list->addFront(i);
+  }
+  for (int i = 0; i < 100; i++) {
+    test_list->removeFront();
+  }
+  int size_post = test_list->size();
+  if (size_post == size_pre) {
     result = "PASSED";
     m_num_passed++;
   }
   m_results += "Test: 10\n";
-  m_results += "Description: Search is False on empty list\n";
+  m_results += "Description: Size is correct after consecutive removeFront on non-empty list\n";
   m_results += ("Result: " + result + "\n");
   m_results += "--------------------------------------------------\n";
 }
 
 void TestSuite::test11() {
+  test_list = new LinkedListOfInts();
+  std::string result = "FAILED";
+  int size_pre = test_list->size();
+  for (int i = 0; i < 100; i++) {
+    test_list->addBack(i);
+  }
+  for (int i = 0; i < 100; i++) {
+    test_list->removeBack();
+  }
+  int size_post = test_list->size();
+  if (size_post == size_pre) {
+    result = "PASSED";
+    m_num_passed++;
+  }
+  m_results += "Test: 11\n";
+  m_results += "Description: Size is correct after consecutive removeBack on non-empty list\n";
+  m_results += ("Result: " + result + "\n");
+  m_results += "--------------------------------------------------\n";
+}
+
+void TestSuite::test12() {
+  test_list = new LinkedListOfInts();
+  std::string result = "FAILED";
+  bool search_result = test_list->search(1);
+  if (search_result == false) {
+    result = "PASSED";
+    m_num_passed++;
+  }
+  m_results += "Test: 12\n";
+  m_results += "Description: Search is False on empty list\n";
+  m_results += ("Result: " + result + "\n");
+  m_results += "--------------------------------------------------\n";
+}
+
+void TestSuite::test13() {
   test_list = new LinkedListOfInts();
   std::string result = "FAILED";
   test_list->addFront(2);
@@ -220,39 +262,39 @@ void TestSuite::test11() {
     result = "PASSED";
     m_num_passed++;
   }
-  m_results += "Test: 11\n";
+  m_results += "Test: 13\n";
   m_results += "Description: Search is False on empty search result\n";
   m_results += ("Result: " + result + "\n");
   m_results += "--------------------------------------------------\n";
 }
 
-void TestSuite::test12() {
+void TestSuite::test14() {
   test_list = new LinkedListOfInts();
   std::string result = "FAILED";
   if (test_list->removeFront() == false) {
     result = "PASSED";
     m_num_passed++;
   }
-  m_results += "Test: 12\n";
+  m_results += "Test: 14\n";
   m_results += "Description: removeFront on empty list is False\n";
   m_results += ("Result: " + result + "\n");
   m_results += "--------------------------------------------------\n";
 }
 
-void TestSuite::test13() {
+void TestSuite::test15() {
   test_list = new LinkedListOfInts();
   std::string result = "FAILED";
   if (test_list->removeBack() == false) {
     result = "PASSED";
     m_num_passed++;
   }
-  m_results += "Test: 13\n";
+  m_results += "Test: 15\n";
   m_results += "Description: removeBack on empty list is False\n";
   m_results += ("Result: " + result + "\n");
   m_results += "--------------------------------------------------\n";
 }
 
-void TestSuite::test14() {
+void TestSuite::test16() {
   test_list = new LinkedListOfInts();
   std::string result = "FAILED";
   for (int i = 0; i < 100; i++) {
@@ -263,13 +305,13 @@ void TestSuite::test14() {
     result = "PASSED";
     m_num_passed++;
   }
-  m_results += "Test: 14\n";
+  m_results += "Test: 16\n";
   m_results += "Description: Search is True on non-empty search result over large list\n";
   m_results += ("Result: " + result + "\n");
   m_results += "--------------------------------------------------\n";
 }
 
-void TestSuite::test15() {
+void TestSuite::test17() {
   test_list = new LinkedListOfInts();
   std::string result = "FAILED";
   std::vector<int> list_vector = test_list->toVector();
@@ -277,13 +319,13 @@ void TestSuite::test15() {
     result = "PASSED";
     m_num_passed++;
   }
-  m_results += "Test: 15\n";
+  m_results += "Test: 17\n";
   m_results += "Description: toVector is empty vector on empty list\n";
   m_results += ("Result: " + result + "\n");
   m_results += "--------------------------------------------------\n";
 }
 
-void TestSuite::test16() {
+void TestSuite::test18() {
   test_list = new LinkedListOfInts();
   std::string result = "FAILED";
   for (int i = 0; i < 100; i++) {
@@ -295,7 +337,7 @@ void TestSuite::test16() {
     result = "PASSED";
     m_num_passed++;
   }
-  m_results += "Test: 16\n";
+  m_results += "Test: 18\n";
   m_results += "Description: toVector creates vector containing contents of large list\n";
   m_results += ("Result: " + result + "\n");
   m_results += "--------------------------------------------------\n";
