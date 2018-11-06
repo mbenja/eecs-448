@@ -85,43 +85,53 @@ public:
   void test13();
 
   /**
-    * @post Prints Pass/Fail: Search is False on empty list
+    * @post Prints Pass/Fail: addFront adds node in correct location in non-empty list
   */
   void test14();
 
   /**
-    * @post Prints Pass/Fail: Search is False on empty search result
+    * @post Prints Pass/Fail: addBack adds node in correct location in non-empty list
   */
   void test15();
 
   /**
-    * @post Prints Pass/Fail: Search is True on non-empty search result over large list
+    * @post Prints Pass/Fail: Search is False on empty list
   */
   void test16();
 
   /**
-    * @post Prints Pass/Fail: toVector is empty vector on empty list
+    * @post Prints Pass/Fail: Search is False on empty search result
   */
   void test17();
 
   /**
-    * @post Prints Pass/Fail: toVector creates vector containing contents of large list
+    * @post Prints Pass/Fail: Search is True on non-empty search result over large list
   */
   void test18();
 
   /**
-    * @post Prints Pass/Fail: addFront adds node in correct location in non-empty list
+    * @post Prints Pass/Fail: toVector is empty vector on empty list
   */
   void test19();
 
   /**
-    * @post Prints Pass/Fail: addBack adds node in correct location in non-empty list
+    * @post Prints Pass/Fail: toVector creates vector containing contents of large list
   */
   void test20();
+
+  /**
+    * @post Prints Pass/Fail: removeFront removes correct node in non-empty list
+  */
+  void test21();
+
+  /**
+    * @post Prints Pass/Fail: removeBack removes correct node in non-empty list
+  */
+  void test22();
 private:
   LinkedListOfInts* test_list;
   std::string m_results;
-  int m_num_tests = 16;
+  int m_num_tests = 22;
   int m_num_passed = 0;
 };
 

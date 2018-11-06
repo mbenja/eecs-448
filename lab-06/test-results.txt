@@ -1,0 +1,91 @@
+--------------------------------------------------
+Test: 1
+Description: Size of empty list is zero
+Result: PASSED
+--------------------------------------------------
+Test: 2
+Description: Size is correct after singular addFront
+Result: PASSED
+--------------------------------------------------
+Test: 3
+Description: Size is correct after singular addBack
+Result: PASSED
+--------------------------------------------------
+Test: 4
+Description: Size is correct after consecutive addFront
+Result: PASSED
+--------------------------------------------------
+Test: 5
+Description: Size is correct after consecutive addBack
+Result: PASSED
+--------------------------------------------------
+Test: 6
+Description: isEmpty is False on empty list
+Result: FAILED
+--------------------------------------------------
+Test: 7
+Description: isEmpty is True on non-empty list
+Result: PASSED
+--------------------------------------------------
+Test: 8
+Description: Size is correct after singular addFront and removeFront
+Result: FAILED
+--------------------------------------------------
+Test: 9
+Description: Size is correct after singular addBack and removeBack
+Result: FAILED
+--------------------------------------------------
+Test: 10
+Description: Size is correct after consecutive removeFront on non-empty list
+Result: FAILED
+--------------------------------------------------
+Test: 11
+Description: Size is correct after consecutive removeBack on non-empty list
+Result: FAILED
+--------------------------------------------------
+Test: 12
+Description: removeFront on empty list is False
+Result: PASSED
+--------------------------------------------------
+Test: 13
+Description: removeBack on empty list is False
+Result: PASSED
+--------------------------------------------------
+Test: 14
+Description: addFront adds node in correct location in non-empty list
+Result: PASSED
+--------------------------------------------------
+Test: 15
+Description: addBack adds node in correct location in non-empty list
+Result: PASSED
+--------------------------------------------------
+Test: 16
+Description: Search is False on empty list
+Result: PASSED
+--------------------------------------------------
+Test: 17
+Description: Search is False on empty search result
+Result: PASSED
+--------------------------------------------------
+Test: 18
+Description: Search is True on non-empty search result over large list
+Result: PASSED
+--------------------------------------------------
+Test: 19
+Description: toVector is empty vector on empty list
+Result: PASSED
+--------------------------------------------------
+Test: 20
+Description: toVector creates vector containing contents of large list
+Result: PASSED
+--------------------------------------------------
+Test: 21
+Description: removeFront removes correct node in non-empty list
+Result: FAILED
+--------------------------------------------------
+Test: 22
+Description: removeBack removes correct node in non-empty list
+Result: FAILED
+--------------------------------------------------
+15 out of 22 tests passed.
+68.181818% green, 31.818182% red.

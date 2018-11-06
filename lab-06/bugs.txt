@@ -1,0 +1,4 @@
+removeFront() and removeBack() always return false, regardless of whether or not the list is empty or populated. There could be an issue with the return value,
+where the functions are returning false if the size of the linked list does not change. What is more likely is that the function is misreading the size of the linked list. It is known
+that the size is incrementing properly upon adding to the linked list, as calling size() after doing either action returns the correct size. With this in mind, it becomes even more likely
+that the function is not reading the size of the linked list properly, and is always thinking that the linked list is empty, thus never actually removing any nodes from the list.
