@@ -34,6 +34,10 @@ public:
     * @post Prints Pass/Fail: Size is correct after consecutive addFront
   */
   void test4();
+  /**
+    * @post Prints Pass/Fail: Size is correct after consecutive addBack
+  */
+  void test5();
 private:
   LinkedListOfInts test_list;
 };

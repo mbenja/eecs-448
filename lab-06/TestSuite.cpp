@@ -15,6 +15,7 @@ void TestSuite::runTests() {
   test2();
   test3();
   test4();
+  test5();
 
   std::cout << "Tests complete.\n";
 }
@@ -62,4 +63,17 @@ void TestSuite::test4() {
     passed = "PASSED";
   }
   std::cout << "Test 4: Size is correct after consecutive addFront - " << passed << "\n";
+}
+
+void TestSuite::test5() {
+  std::string passed = "FAILED";
+  int size_pre = test_list.size();
+  for (int i = 0; i < 100; i++) {
+    test_list.addBack(i);
+  }
+  int size_post = test_list.size();
+  if (size_post == (size_pre + 100)) {
+    passed = "PASSED";
+  }
+  std::cout << "Test 5: Size is correct after consecutive addBack - " << passed << "\n";
 }
