@@ -40,11 +40,11 @@ public:
   */
   void test5();
   /**
-    * @post Prints Pass/Fail: Size is correct after consecutive removeFront on large list
+    * @post Prints Pass/Fail: isEmpty is False on empty list
   */
   void test6();
   /**
-    * @post Prints Pass/Fail: Size is correct after consecutive removeBack on large list
+    * @post Prints Pass/Fail: isEmpty is True on non-empty list
   */
   void test7();
   /**
@@ -83,18 +83,10 @@ public:
     * @post Prints Pass/Fail: toVector creates vector containing contents of large list
   */
   void test16();
-  /**
-    * @post Prints Pass/Fail: Order of list is preserved after removeFront on large list
-  */
-  void test17();
-  /**
-    * @post Prints Pass/Fail: Order of list is preserved after removeBack on large list
-  */
-  void test18();
 private:
   LinkedListOfInts* test_list;
   std::string m_results;
-  int m_num_tests = 18;
+  int m_num_tests = 16;
   int m_num_passed = 0;
 };
 

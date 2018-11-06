@@ -137,20 +137,12 @@ void TestSuite::test5() {
 void TestSuite::test6() {
   test_list = new LinkedListOfInts();
   std::string result = "FAILED";
-  for (int i = 0; i < 100; i++) {
-    test_list->addFront(i);
-  }
-  int size_pre = test_list->size();
-  for (int i = 0; i < 5; i++) {
-    test_list->removeFront();
-  }
-  int size_post = test_list->size();
-  if (size_post == (size_pre - 5)) {
+  if (!test_list->isEmpty()) {
     result = "PASSED";
     m_num_passed++;
   }
   m_results += "Test: 6\n";
-  m_results += "Description: Size is correct after consecutive removeFront on large list\n";
+  m_results += "Description: isEmpty is False on empty list\n";
   m_results += ("Result: " + result + "\n");
   m_results += "--------------------------------------------------\n";
 }
@@ -159,19 +151,14 @@ void TestSuite::test7() {
   test_list = new LinkedListOfInts();
   std::string result = "FAILED";
   for (int i = 0; i < 100; i++) {
-    test_list->addBack(i);
+    test_list->addFront(i);
   }
-  int size_pre = test_list->size();
-  for (int i = 0; i < 5; i++) {
-    test_list->removeBack();
-  }
-  int size_post = test_list->size();
-  if (size_post == (size_pre - 5)) {
+  if (test_list->isEmpty()) {
     result = "PASSED";
     m_num_passed++;
   }
   m_results += "Test: 7\n";
-  m_results += "Description: Size is correct after consecutive removeBack on large list\n";
+  m_results += "Description: isEmpty is True on non-empty list\n";
   m_results += ("Result: " + result + "\n");
   m_results += "--------------------------------------------------\n";
 }
@@ -310,46 +297,6 @@ void TestSuite::test16() {
   }
   m_results += "Test: 16\n";
   m_results += "Description: toVector creates vector containing contents of large list\n";
-  m_results += ("Result: " + result + "\n");
-  m_results += "--------------------------------------------------\n";
-}
-
-void TestSuite::test17() {
-  test_list = new LinkedListOfInts();
-  std::string result = "FAILED";
-  for (int i = 0; i < 100; i++) {
-    test_list->addFront(i);
-  }
-  std::vector<int> list_vector_pre = test_list->toVector();
-  test_list->removeFront();
-  list_vector_pre.erase(list_vector_pre.begin());
-  std::vector<int> list_vector_post = test_list->toVector();
-  if (list_vector_pre == list_vector_post) {
-    result = "PASSED";
-    m_num_passed++;
-  }
-  m_results += "Test: 17\n";
-  m_results += "Description: Order of list is preserved after removeFront on large list\n";
-  m_results += ("Result: " + result + "\n");
-  m_results += "--------------------------------------------------\n";
-}
-
-void TestSuite::test18() {
-  test_list = new LinkedListOfInts();
-  std::string result = "FAILED";
-  for (int i = 0; i < 100; i++) {
-    test_list->addBack(i);
-  }
-  std::vector<int> list_vector_pre = test_list->toVector();
-  test_list->removeBack();
-  list_vector_pre.pop_back();
-  std::vector<int> list_vector_post = test_list->toVector();
-  if (list_vector_pre == list_vector_post) {
-    result = "PASSED";
-    m_num_passed++;
-  }
-  m_results += "Test: 18\n";
-  m_results += "Description: Order of list is preserved after removeBack on large list\n";
   m_results += ("Result: " + result + "\n");
   m_results += "--------------------------------------------------\n";
 }
