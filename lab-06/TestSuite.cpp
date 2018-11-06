@@ -8,10 +8,14 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <fstream>
 #include "TestSuite.h"
 
 void TestSuite::runTests() {
   std::cout << "Beginning tests...\n";
+
+  m_results += "--------------------------------------------------\n";
+
   test1();
   test2();
   test3();
@@ -31,7 +35,21 @@ void TestSuite::runTests() {
   test17();
   test18();
 
-  std::cout << "Tests complete.\n";
+  m_results += std::to_string(m_num_passed);
+  m_results += " out of ";
+  m_results += std::to_string(m_num_tests);
+  m_results += " tests passed.\n";
+  m_results += std::to_string((double(m_num_passed) / m_num_tests) * 100);
+  m_results += "% green, ";
+  m_results += std::to_string(100 - ((double(m_num_passed) / m_num_tests) * 100));
+  m_results += "% red.\n";
+
+  std::ofstream output_file;
+  output_file.open("test-results.txt");
+  output_file << m_results;
+  output_file.close();
+
+  std::cout << "Tests complete. See test-results.txt for results.\n";
 }
 
 void TestSuite::test1() {
@@ -40,8 +58,12 @@ void TestSuite::test1() {
   int size = test_list->size();
   if (size == 0) {
     result = "PASSED";
+    m_num_passed++;
   }
-  std::cout << "Test 1: Size of empty list is zero - " << result << "\n";
+  m_results += "Test: 1\n";
+  m_results += "Description: Size of empty list is zero\n";
+  m_results += ("Result: " + result + "\n");
+  m_results += "--------------------------------------------------\n";
 }
 
 void TestSuite::test2() {
@@ -52,8 +74,12 @@ void TestSuite::test2() {
   int size_post = test_list->size();
   if (size_post == (size_pre + 1)) {
     result = "PASSED";
+    m_num_passed++;
   }
-  std::cout << "Test 2: Size is correct after singular addFront - " << result << "\n";
+  m_results += "Test: 2\n";
+  m_results += "Description: Size is correct after singular addFront\n";
+  m_results += ("Result: " + result + "\n");
+  m_results += "--------------------------------------------------\n";
 }
 
 void TestSuite::test3() {
@@ -64,8 +90,12 @@ void TestSuite::test3() {
   int size_post = test_list->size();
   if (size_post == (size_pre + 1)) {
     result = "PASSED";
+    m_num_passed++;
   }
-  std::cout << "Test 3: Size is correct after singular addBack - " << result << "\n";
+  m_results += "Test: 3\n";
+  m_results += "Description: Size is correct after singular addBack\n";
+  m_results += ("Result: " + result + "\n");
+  m_results += "--------------------------------------------------\n";
 }
 
 void TestSuite::test4() {
@@ -78,8 +108,12 @@ void TestSuite::test4() {
   int size_post = test_list->size();
   if (size_post == (size_pre + 100)) {
     result = "PASSED";
+    m_num_passed++;
   }
-  std::cout << "Test 4: Size is correct after consecutive addFront - " << result << "\n";
+  m_results += "Test: 4\n";
+  m_results += "Description: Size is correct after consecutive addFront\n";
+  m_results += ("Result: " + result + "\n");
+  m_results += "--------------------------------------------------\n";
 }
 
 void TestSuite::test5() {
@@ -92,8 +126,12 @@ void TestSuite::test5() {
   int size_post = test_list->size();
   if (size_post == (size_pre + 100)) {
     result = "PASSED";
+    m_num_passed++;
   }
-  std::cout << "Test 5: Size is correct after consecutive addBack - " << result << "\n";
+  m_results += "Test: 5\n";
+  m_results += "Description: Size is correct after consecutive addBack\n";
+  m_results += ("Result: " + result + "\n");
+  m_results += "--------------------------------------------------\n";
 }
 
 void TestSuite::test6() {
@@ -109,8 +147,12 @@ void TestSuite::test6() {
   int size_post = test_list->size();
   if (size_post == (size_pre - 5)) {
     result = "PASSED";
+    m_num_passed++;
   }
-  std::cout << "Test 6: Size is correct after consecutive removeFront on large list - " << result << "\n";
+  m_results += "Test: 6\n";
+  m_results += "Description: Size is correct after consecutive removeFront on large list\n";
+  m_results += ("Result: " + result + "\n");
+  m_results += "--------------------------------------------------\n";
 }
 
 void TestSuite::test7() {
@@ -126,8 +168,12 @@ void TestSuite::test7() {
   int size_post = test_list->size();
   if (size_post == (size_pre - 5)) {
     result = "PASSED";
+    m_num_passed++;
   }
-  std::cout << "Test 7: Size is correct after consecutive removeBack on large list - " << result << "\n";
+  m_results += "Test: 7\n";
+  m_results += "Description: Size is correct after consecutive removeBack on large list\n";
+  m_results += ("Result: " + result + "\n");
+  m_results += "--------------------------------------------------\n";
 }
 
 void TestSuite::test8() {
@@ -139,8 +185,12 @@ void TestSuite::test8() {
   int size_post = test_list->size();
   if (size_post == size_pre) {
     result = "PASSED";
+    m_num_passed++;
   }
-  std::cout << "Test 8: Size is correct after singular addFront and removeFront - " << result << "\n";
+  m_results += "Test: 8\n";
+  m_results += "Description: Size is correct after singular addFront and removeFront\n";
+  m_results += ("Result: " + result + "\n");
+  m_results += "--------------------------------------------------\n";
 }
 
 void TestSuite::test9() {
@@ -152,8 +202,12 @@ void TestSuite::test9() {
   int size_post = test_list->size();
   if (size_post == size_pre) {
     result = "PASSED";
+    m_num_passed++;
   }
-  std::cout << "Test 9: Size is correct after singular addBack and removeBack - " << result << "\n";
+  m_results += "Test: 9\n";
+  m_results += "Description: Size is correct after singular addBack and removeBack\n";
+  m_results += ("Result: " + result + "\n");
+  m_results += "--------------------------------------------------\n";
 }
 
 void TestSuite::test10() {
@@ -162,8 +216,12 @@ void TestSuite::test10() {
   bool search_result = test_list->search(1);
   if (search_result == false) {
     result = "PASSED";
+    m_num_passed++;
   }
-  std::cout << "Test 10: Search is False on empty list - " << result << "\n";
+  m_results += "Test: 10\n";
+  m_results += "Description: Search is False on empty list\n";
+  m_results += ("Result: " + result + "\n");
+  m_results += "--------------------------------------------------\n";
 }
 
 void TestSuite::test11() {
@@ -173,8 +231,12 @@ void TestSuite::test11() {
   bool search_result = test_list->search(1);
   if (search_result == false) {
     result = "PASSED";
+    m_num_passed++;
   }
-  std::cout << "Test 11: Search is False on empty search result - " << result << "\n";
+  m_results += "Test: 11\n";
+  m_results += "Description: Search is False on empty search result\n";
+  m_results += ("Result: " + result + "\n");
+  m_results += "--------------------------------------------------\n";
 }
 
 void TestSuite::test12() {
@@ -182,8 +244,12 @@ void TestSuite::test12() {
   std::string result = "FAILED";
   if (test_list->removeFront() == false) {
     result = "PASSED";
+    m_num_passed++;
   }
-  std::cout << "Test 12: removeFront on empty list is False - " << result << "\n";
+  m_results += "Test: 12\n";
+  m_results += "Description: removeFront on empty list is False\n";
+  m_results += ("Result: " + result + "\n");
+  m_results += "--------------------------------------------------\n";
 }
 
 void TestSuite::test13() {
@@ -191,8 +257,12 @@ void TestSuite::test13() {
   std::string result = "FAILED";
   if (test_list->removeBack() == false) {
     result = "PASSED";
+    m_num_passed++;
   }
-  std::cout << "Test 13: removeBack on empty list is False - " << result << "\n";
+  m_results += "Test: 13\n";
+  m_results += "Description: removeBack on empty list is False\n";
+  m_results += ("Result: " + result + "\n");
+  m_results += "--------------------------------------------------\n";
 }
 
 void TestSuite::test14() {
@@ -204,8 +274,12 @@ void TestSuite::test14() {
   bool search_result = test_list->search(50);
   if (search_result == true) {
     result = "PASSED";
+    m_num_passed++;
   }
-  std::cout << "Test 14: Search is True on non-empty search result over large list - " << result << "\n";
+  m_results += "Test: 14\n";
+  m_results += "Description: Search is True on non-empty search result over large list\n";
+  m_results += ("Result: " + result + "\n");
+  m_results += "--------------------------------------------------\n";
 }
 
 void TestSuite::test15() {
@@ -214,8 +288,12 @@ void TestSuite::test15() {
   std::vector<int> list_vector = test_list->toVector();
   if (list_vector.empty() == true) {
     result = "PASSED";
+    m_num_passed++;
   }
-  std::cout << "Test 15: toVector is empty vector on empty list - " << result << "\n";
+  m_results += "Test: 15\n";
+  m_results += "Description: toVector is empty vector on empty list\n";
+  m_results += ("Result: " + result + "\n");
+  m_results += "--------------------------------------------------\n";
 }
 
 void TestSuite::test16() {
@@ -228,8 +306,12 @@ void TestSuite::test16() {
   if (list_vector.empty() == false) {
     // LinkedListOfInts.h documentation for toVector states we may assume correct functionality
     result = "PASSED";
+    m_num_passed++;
   }
-  std::cout << "Test 16: toVector creates vector containing contents of large list - " << result << "\n";
+  m_results += "Test: 16\n";
+  m_results += "Description: toVector creates vector containing contents of large list\n";
+  m_results += ("Result: " + result + "\n");
+  m_results += "--------------------------------------------------\n";
 }
 
 void TestSuite::test17() {
@@ -244,8 +326,12 @@ void TestSuite::test17() {
   std::vector<int> list_vector_post = test_list->toVector();
   if (list_vector_pre == list_vector_post) {
     result = "PASSED";
+    m_num_passed++;
   }
-  std::cout << "Test 17: Order of list is preserved after removeFront on large list - " << result << "\n";
+  m_results += "Test: 17\n";
+  m_results += "Description: Order of list is preserved after removeFront on large list\n";
+  m_results += ("Result: " + result + "\n");
+  m_results += "--------------------------------------------------\n";
 }
 
 void TestSuite::test18() {
@@ -260,6 +346,10 @@ void TestSuite::test18() {
   std::vector<int> list_vector_post = test_list->toVector();
   if (list_vector_pre == list_vector_post) {
     result = "PASSED";
+    m_num_passed++;
   }
-  std::cout << "Test 18: Order of list is preserved after removeBack on large list - " << result << "\n";
+  m_results += "Test: 18\n";
+  m_results += "Description: Order of list is preserved after removeBack on large list\n";
+  m_results += ("Result: " + result + "\n");
+  m_results += "--------------------------------------------------\n";
 }

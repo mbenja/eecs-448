@@ -9,6 +9,7 @@
 #define TEST_SUITE_H
 
 #include <iostream>
+#include <string>
 #include "LinkedListOfInts.h"
 
 class TestSuite {
@@ -92,6 +93,9 @@ public:
   void test18();
 private:
   LinkedListOfInts* test_list;
+  std::string m_results;
+  int m_num_tests = 18;
+  int m_num_passed = 0;
 };
 
 #endif
