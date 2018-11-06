@@ -39,41 +39,49 @@ public:
   */
   void test5();
   /**
-    * @post Prints Pass/Fail: Size is correct after singular addFront and removeFront
+    * @post Prints Pass/Fail: Size is correct after consecutive removeFront on large list
   */
   void test6();
   /**
-    * @post Prints Pass/Fail: Size is correct after singular addBack and removeBack
+    * @post Prints Pass/Fail: Size is correct after consecutive removeBack on large list
   */
   void test7();
   /**
-    * @post Prints Pass/Fail: Search is False on empty list
+    * @post Prints Pass/Fail: Size is correct after singular addFront and removeFront
   */
   void test8();
   /**
-    * @post Prints Pass/Fail: Search is False on empty search result
+    * @post Prints Pass/Fail: Size is correct after singular addBack and removeBack
   */
   void test9();
   /**
-    * @post Prints Pass/Fail: Search is True on non-empty search result over large list
+    * @post Prints Pass/Fail: removeFront on empty list is False
   */
   void test10();
   /**
-    * @post Prints Pass/Fail: toVector is empty vector on empty list
+    * @post Prints Pass/Fail: removeBack on empty list is False
   */
   void test11();
   /**
-    * @post Prints Pass/Fail: toVector is creates vector containing contents of large list
+    * @post Prints Pass/Fail: Search is False on empty list
   */
   void test12();
   /**
-    * @post Prints Pass/Fail: removeFront on empty list is False
+    * @post Prints Pass/Fail: Search is False on empty search result
   */
   void test13();
   /**
-    * @post Prints Pass/Fail: removeBack on empty list is False
+    * @post Prints Pass/Fail: Search is True on non-empty search result over large list
   */
   void test14();
+  /**
+    * @post Prints Pass/Fail: toVector is empty vector on empty list
+  */
+  void test15();
+  /**
+    * @post Prints Pass/Fail: toVector is creates vector containing contents of large list
+  */
+  void test16();
 private:
   LinkedListOfInts* test_list;
 };
