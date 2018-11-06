@@ -13,6 +13,7 @@ void TestSuite::runTests() {
   std::cout << "Beginning tests...\n";
   test1();
   test2();
+  test3();
 
   std::cout << "Tests complete.\n";
 }
@@ -35,4 +36,15 @@ void TestSuite::test2() {
   }
   test_list.removeFront();
   std::cout << "Test 2: Size is correct after singular addFront - " << passed << "\n";
+}
+
+void TestSuite::test3() {
+  std::string passed = "FAILED";
+  test_list.addBack(1);
+  int size = test_list.size();
+  if (size == 1) {
+    passed = "PASSED";
+  }
+  test_list.removeBack();
+  std::cout << "Test 2: Size is correct after singular addBack - " << passed << "\n";
 }
