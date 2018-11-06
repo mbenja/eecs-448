@@ -22,6 +22,10 @@ public:
     * @post Prints Pass/Fail: Size of empty list is zero
   */
   void test1();
+  /**
+    * @post Prints Pass/Fail: Size is correct after singular addFront
+  */
+  void test2();
 private:
   LinkedListOfInts test_list;
 };

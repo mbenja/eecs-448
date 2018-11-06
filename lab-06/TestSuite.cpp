@@ -10,7 +10,11 @@
 #include "TestSuite.h"
 
 void TestSuite::runTests() {
+  std::cout << "Beginning tests...\n";
   test1();
+  test2();
+
+  std::cout << "Tests complete.\n";
 }
 
 void TestSuite::test1() {
@@ -20,4 +24,15 @@ void TestSuite::test1() {
     passed = "PASSED";
   }
   std::cout << "Test 1: Size of empty list is zero - " << passed << "\n";
+}
+
+void TestSuite::test2() {
+  std::string passed = "FAILED";
+  test_list.addFront(1);
+  int size = test_list.size();
+  if (size == 1) {
+    passed = "PASSED";
+  }
+  test_list.removeFront();
+  std::cout << "Test 2: Size is correct after singular addFront - " << passed << "\n";
 }
