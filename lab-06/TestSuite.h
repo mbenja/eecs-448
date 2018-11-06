@@ -30,6 +30,10 @@ public:
     * @post Prints Pass/Fail: Size is correct after singular addBack
   */
   void test3();
+  /**
+    * @post Prints Pass/Fail: Size is correct after consecutive addFront
+  */
+  void test4();
 private:
   LinkedListOfInts test_list;
 };
