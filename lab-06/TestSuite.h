@@ -62,6 +62,18 @@ public:
     * @post Prints Pass/Fail: toVector is empty vector on empty list
   */
   void test11();
+  /**
+    * @post Prints Pass/Fail: toVector is creates vector containing contents of large list
+  */
+  void test12();
+  /**
+    * @post Prints Pass/Fail: removeFront on empty list is False
+  */
+  void test13();
+  /**
+    * @post Prints Pass/Fail: removeBack on empty list is False
+  */
+  void test14();
 private:
   LinkedListOfInts* test_list;
 };

@@ -23,6 +23,9 @@ void TestSuite::runTests() {
   test9();
   test10();
   test11();
+  test12();
+  test13();
+  test14();
 
   std::cout << "Tests complete.\n";
 }
@@ -157,4 +160,36 @@ void TestSuite::test11() {
     result = "PASSED";
   }
   std::cout << "Test 11: toVector is empty vector on empty list - " << result << "\n";
+}
+
+void TestSuite::test12() {
+  test_list = new LinkedListOfInts();
+  std::string result = "FAILED";
+  for (int i = 0; i < 100; i++) {
+    test_list->addFront(i);
+  }
+  std::vector<int> list_vector = test_list->toVector();
+  if (list_vector.empty() == false) {
+    // LinkedListOfInts.h documentation for toVector states we may assume correct functionality
+    result = "PASSED";
+  }
+  std::cout << "Test 12: toVector is creates vector containing contents of large list - " << result << "\n";
+}
+
+void TestSuite::test13() {
+  test_list = new LinkedListOfInts();
+  std::string result = "FAILED";
+  if (test_list->removeFront() == false) {
+    result = "PASSED";
+  }
+  std::cout << "Test 13: removeFront on empty list is False - " << result << "\n";
+}
+
+void TestSuite::test14() {
+  test_list = new LinkedListOfInts();
+  std::string result = "FAILED";
+  if (test_list->removeBack() == false) {
+    result = "PASSED";
+  }
+  std::cout << "Test 14: removeBack on empty list is False - " << result << "\n";
 }
