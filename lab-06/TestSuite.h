@@ -79,9 +79,17 @@ public:
   */
   void test15();
   /**
-    * @post Prints Pass/Fail: toVector is creates vector containing contents of large list
+    * @post Prints Pass/Fail: toVector creates vector containing contents of large list
   */
   void test16();
+  /**
+    * @post Prints Pass/Fail: Order of list is preserved after removeFront on large list
+  */
+  void test17();
+  /**
+    * @post Prints Pass/Fail: Order of list is preserved after removeBack on large list
+  */
+  void test18();
 private:
   LinkedListOfInts* test_list;
 };

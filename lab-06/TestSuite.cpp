@@ -28,6 +28,8 @@ void TestSuite::runTests() {
   test14();
   test15();
   test16();
+  test17();
+  test18();
 
   std::cout << "Tests complete.\n";
 }
@@ -227,5 +229,37 @@ void TestSuite::test16() {
     // LinkedListOfInts.h documentation for toVector states we may assume correct functionality
     result = "PASSED";
   }
-  std::cout << "Test 16: toVector is creates vector containing contents of large list - " << result << "\n";
+  std::cout << "Test 16: toVector creates vector containing contents of large list - " << result << "\n";
+}
+
+void TestSuite::test17() {
+  test_list = new LinkedListOfInts();
+  std::string result = "FAILED";
+  for (int i = 0; i < 100; i++) {
+    test_list->addFront(i);
+  }
+  std::vector<int> list_vector_pre = test_list->toVector();
+  test_list->removeFront();
+  list_vector_pre.erase(list_vector_pre.begin());
+  std::vector<int> list_vector_post = test_list->toVector();
+  if (list_vector_pre == list_vector_post) {
+    result = "PASSED";
+  }
+  std::cout << "Test 17: Order of list is preserved after removeFront on large list - " << result << "\n";
+}
+
+void TestSuite::test18() {
+  test_list = new LinkedListOfInts();
+  std::string result = "FAILED";
+  for (int i = 0; i < 100; i++) {
+    test_list->addBack(i);
+  }
+  std::vector<int> list_vector_pre = test_list->toVector();
+  test_list->removeBack();
+  list_vector_pre.pop_back();
+  std::vector<int> list_vector_post = test_list->toVector();
+  if (list_vector_pre == list_vector_post) {
+    result = "PASSED";
+  }
+  std::cout << "Test 18: Order of list is preserved after removeBack on large list - " << result << "\n";
 }
