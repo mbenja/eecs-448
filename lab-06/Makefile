@@ -18,4 +18,4 @@ TestSuite.o: TestSuite.h LinkedListOfInts.h
 
 #DON'T delete LinkedList.o!
 clean:
-	rm main.o *.*~ prog
+	rm main.o TestSuite.o *.*~ LAB6
