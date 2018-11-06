@@ -23,8 +23,9 @@ void TestSuite::runTests() {
 }
 
 void TestSuite::test1() {
+  test_list = new LinkedListOfInts();
   std::string passed = "FAILED";
-  int size = test_list.size();
+  int size = test_list->size();
   if (size == 0) {
     passed = "PASSED";
   }
@@ -32,10 +33,11 @@ void TestSuite::test1() {
 }
 
 void TestSuite::test2() {
+  test_list = new LinkedListOfInts();
   std::string passed = "FAILED";
-  int size_pre = test_list.size();
-  test_list.addFront(1);
-  int size_post = test_list.size();
+  int size_pre = test_list->size();
+  test_list->addFront(1);
+  int size_post = test_list->size();
   if (size_post == (size_pre + 1)) {
     passed = "PASSED";
   }
@@ -43,24 +45,25 @@ void TestSuite::test2() {
 }
 
 void TestSuite::test3() {
+  test_list = new LinkedListOfInts();
   std::string passed = "FAILED";
-  int size_pre = test_list.size();
-  test_list.addBack(1);
-  int size_post = test_list.size();
+  int size_pre = test_list->size();
+  test_list->addBack(1);
+  int size_post = test_list->size();
   if (size_post == (size_pre + 1)) {
     passed = "PASSED";
   }
-  test_list.removeBack();
   std::cout << "Test 3: Size is correct after singular addBack - " << passed << "\n";
 }
 
 void TestSuite::test4() {
+  test_list = new LinkedListOfInts();
   std::string passed = "FAILED";
-  int size_pre = test_list.size();
+  int size_pre = test_list->size();
   for (int i = 0; i < 100; i++) {
-    test_list.addFront(i);
+    test_list->addFront(i);
   }
-  int size_post = test_list.size();
+  int size_post = test_list->size();
   if (size_post == (size_pre + 100)) {
     passed = "PASSED";
   }
@@ -68,12 +71,13 @@ void TestSuite::test4() {
 }
 
 void TestSuite::test5() {
+  test_list = new LinkedListOfInts();
   std::string passed = "FAILED";
-  int size_pre = test_list.size();
+  int size_pre = test_list->size();
   for (int i = 0; i < 100; i++) {
-    test_list.addBack(i);
+    test_list->addBack(i);
   }
-  int size_post = test_list.size();
+  int size_post = test_list->size();
   if (size_post == (size_pre + 100)) {
     passed = "PASSED";
   }
@@ -81,11 +85,12 @@ void TestSuite::test5() {
 }
 
 void TestSuite::test6() {
+  test_list = new LinkedListOfInts();
   std::string passed = "FAILED";
-  int size_pre = test_list.size();
-  test_list.addFront(1);
-  test_list.removeFront();
-  int size_post = test_list.size();
+  int size_pre = test_list->size();
+  test_list->addFront(1);
+  test_list->removeFront();
+  int size_post = test_list->size();
   if (size_post == size_pre) {
     passed = "PASSED";
   }
@@ -93,13 +98,20 @@ void TestSuite::test6() {
 }
 
 void TestSuite::test7() {
+  test_list = new LinkedListOfInts();
   std::string passed = "FAILED";
-  int size_pre = test_list.size();
-  test_list.addBack(1);
-  test_list.removeBack();
-  int size_post = test_list.size();
+  int size_pre = test_list->size();
+  test_list->addBack(1);
+  test_list->removeBack();
+  int size_post = test_list->size();
   if (size_post == size_pre) {
     passed = "PASSED";
   }
   std::cout << "Test 7: Size is correct after singular addBack and removeBack - " << passed << "\n";
+}
+
+void TestSuite::test8() {
+  test_list = new LinkedListOfInts();
+  std::string passed = "FAILED";
+
 }

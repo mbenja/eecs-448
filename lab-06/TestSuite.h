@@ -46,8 +46,12 @@ public:
     * @post Prints Pass/Fail: Size is correct after singular addBack and removeBack
   */
   void test7();
+  /**
+    * @post Prints Pass/Fail: Search is False on empty list
+  */
+  void test8();
 private:
-  LinkedListOfInts test_list;
+  LinkedListOfInts* test_list;
 };
 
 #endif
