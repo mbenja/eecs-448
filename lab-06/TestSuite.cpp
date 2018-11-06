@@ -7,6 +7,7 @@
 
 #include <iostream>
 #include <string>
+#include <vector>
 #include "TestSuite.h"
 
 void TestSuite::runTests() {
@@ -18,6 +19,9 @@ void TestSuite::runTests() {
   test5();
   test6();
   test7();
+  test8();
+  test9();
+  test10();
 
   std::cout << "Tests complete.\n";
 }
@@ -113,5 +117,46 @@ void TestSuite::test7() {
 void TestSuite::test8() {
   test_list = new LinkedListOfInts();
   std::string passed = "FAILED";
+  bool search_result = test_list->search(1);
+  if (search_result == false) {
+    passed = "PASSED";
+  }
+  std::cout << "Test 8: Search is False on empty list - " << passed << "\n";
+}
 
+void TestSuite::test9() {
+  test_list = new LinkedListOfInts();
+  std::string passed = "FAILED";
+  test_list->addFront(2);
+  bool search_result = test_list->search(1);
+  if (search_result == false) {
+    passed = "PASSED";
+  }
+  std::cout << "Test 9: Search is False on empty search result - " << passed << "\n";
+}
+
+void TestSuite::test10() {
+  test_list = new LinkedListOfInts();
+  std::string passed = "FAILED";
+  for (int i = 0; i < 100; i++) {
+    test_list->addFront(i);
+  }
+  bool search_result = test_list->search(50);
+  if (search_result == true) {
+    passed = "PASSED";
+  }
+  std::cout << "Test 10: Search is True on non-empty search result over large list - " << passed << "\n";
+}
+
+void TestSuite::test11() {
+  test_list = new LinkedListOfInts();
+  std::string passed = "FAILED";
+  for (int i = 0; i < 100; i++) {
+    test_list->addFront(i);
+  }
+  bool search_result = test_list->search(50);
+  if (search_result == true) {
+    passed = "PASSED";
+  }
+  std::cout << "Test 10: Search is True on non-empty search result over large list - " << passed << "\n";
 }

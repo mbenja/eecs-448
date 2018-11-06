@@ -50,6 +50,18 @@ public:
     * @post Prints Pass/Fail: Search is False on empty list
   */
   void test8();
+  /**
+    * @post Prints Pass/Fail: Search is False on empty search result
+  */
+  void test9();
+  /**
+    * @post Prints Pass/Fail: Search is True on non-empty search result over large list
+  */
+  void test10();
+  /**
+    * @post Prints Pass/Fail: toVector is empty vector on empty list
+  */
+  void test11();
 private:
   LinkedListOfInts* test_list;
 };
